@@ -1,0 +1,3 @@
+﻿  First C++ project.cpp
+D:\Personal\Study\WWP\First C++ project\First C++ project\First C++ project.cpp(14,8): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  First C++ project.vcxproj -> D:\Personal\Study\WWP\First C++ project\x64\Debug\First C++ project.exe
