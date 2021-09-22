@@ -1,11 +1,15 @@
 ﻿#include <iostream>
-#include <Windows.h>
+#include <cstdio>
+#include <windows.h>
+
+//Мутим кириллицу
+#pragma execution_character_set( "utf-8" )
 
 int main()
 {
-	//Намутил кириллицу
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+	//Мутим кириллицу
+	SetConsoleOutputCP(65001);
+
 
 	//Пункт 1
 	double a = 0, b = 0;
