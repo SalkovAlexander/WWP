@@ -13,56 +13,67 @@ int main()
 	double A, C, B;
 
 	//1
-	x1 = 1, y1 = 6.6;
-	x2 = 8, y2 = 15.3;
+	std::cout << "Найти расстояние между двумя точками с заданными координатами. \n";
+	std::cout << "Введите 4 координаты через пробел в виде: x1, y1, x2, y2 \n";
+
+	std::cin >> x1 >> y1 >> x2 >> y2;
 
 	double dist = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 
-	std::cout << dist << "\n\n";
+	std::cout << "Расстояние между двумя точками с заданными координатами = "<< dist << "\n\n";
 
 	//2
-	A = 3, C = 7, B = 15;
+	std::cout << "Даны три точки A, B, C на числовой оси. Найти длины отрезков AC и BC и их сумму.\n";
+	std::cout << "Введите 3 координаты точек на числовой оси через запятую в виде: A, B, C.\n";
 
-	double AC = C - A;
-	double BC = B - C;
+	std::cin >> A >> B >> C;
+
+	double AC = abs(A - C);
+	double BC = abs(B - C);
 	double ACBC = AC + BC;
 
-	std::cout << AC << " " << BC << " " << ACBC << "\n\n";
+	std::cout << "Длина отрезка АС = " << AC << " Длина отрезка ВС = " << BC << " Сумма АС и ВС = " << ACBC << "\n\n";
 
 	//3
-	A = 3, C = 7, B = 15;
+	std::cout << "Даны три точки A, B, C на числовой оси. Точка C расположена между точками A и B.\nНайти произведение длин отрезков AC и BC.\n";
+	std::cout << "Введите 3 координаты точек на числовой оси через запятую в виде: A, B, C.\n";
 
-	AC = C - A;
-	BC = B - C;
+	std::cin >> A >> B >> C;
+
+	AC = abs(A - C);
+	BC = abs(B - C);
 
 
-	std::cout << AC * BC << "\n\n";
+	std::cout << "Произведение длин отрезков AC и BC = " << AC * BC << "\n\n";
 
 	//4
-	x1 = 0, y1 = 0;
-	x2 = 2, y2 = 2;
+	std::cout << "Даны координаты двух противоположных вершин прямоугольника: (x1, y1), (x2, y2).\nСтороны прямоугольника параллельны осям координат.\n";
+	std::cout << "Введите 4 координаты через пробел в виде: x1, y1, x2, y2 \n";
 
-	double edge_x = x2 - x1;
-	double edge_y = y2 - y1;
+	std::cin >> x1 >> y1 >> x2 >> y2;
+
+	double edge_x = abs(x2 - x1);
+	double edge_y = abs(y2 - y1);
 
 	double S = edge_x * edge_y;
 	double P = (edge_x + edge_y) * 2;
 
-	std::cout << S << " " << P << "\n\n";
+	std::cout << "Периметр прямоугольника = " << P << " Площадь равна = " << S << "\n\n";
 
 	//5
-	x1 = 0, y1 = 0;
-	x2 = 0, y2 = 5;
-	x3 = 5, y3 = 0;
+	std::cout << "Даны координаты трех вершин треугольника: (x1, y1), (x2, y2), (x3, y3).\n";
+	std::cout << "Введите 6 координат через пробел в виде: x1, y1, x2, y2, x3, y3\n";
+
+	std::cin >> x1 >> y2 >> x2 >> y2 >> x3 >> y3;
 
 	double side_1 = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 	double side_2 = sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
-	double side_3= sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
+	double side_3 = sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
 
 	P = side_1 + side_2 + side_3;
 	
 	double p = P / 2;
 	S = sqrt(p * (p - side_1) * (p - side_2) * (p - side_3));
 
-	std::cout << S << " " << P << "\n\n";
+	std::cout << "Площадь треугольника = " << S << " Периметр треугольника = " << P << "\n\n";
 }
