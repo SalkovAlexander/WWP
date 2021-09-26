@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <Windows.h>
 
 double pow(double num, int pow)
 {
@@ -12,14 +13,16 @@ double pow(double num, int pow)
 	return r;
 }
 
-
 int main()
 {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
 	double A, B, C;
 	double temp1, temp2;
 
 	//1
-	std::cout << "Поменяev местами содержимое переменных A и B\n";
+	std::cout << "Поменяeм местами содержимое переменных A и B\n";
 	std::cout << "Введите значение переменной А\n";
 	std::cin >> A;
 	std::cout << "Введите значение переменной B\n";
@@ -32,7 +35,7 @@ int main()
 	std::cout << "Значение переменной А - " << A << " Значение переменной В - " << B << "\n\n";
 
 	//2
-	std::cout << "Поменяev местами содержимое переменных A, B и С. A в B, B — в C, C — в A\n";
+	std::cout << "Поменяeм местами содержимое переменных A, B и С. A в B, B — в C, C — в A\n";
 	std::cout << "Введите значение переменной А\n";
 	std::cin >> A;
 	std::cout << "Введите значение переменной B\n";
@@ -49,7 +52,7 @@ int main()
 	std::cout << "Значение переменной А - " << A << " Значение переменной В - " << B << " Значение переменной C - " << C << "\n\n";
 
 	//3
-	std::cout << "Поменяev местами содержимое переменных A, B и С. A в C, C — в B, B — в A\n";
+	std::cout << "Поменяeм местами содержимое переменных A, B и С. A в C, C — в B, B — в A\n";
 	std::cout << "Введите значение переменной А\n";
 	std::cin >> A;
 	std::cout << "Введите значение переменной B\n";
@@ -68,7 +71,7 @@ int main()
 	//4
 	double y, x = 0;
 
-	std::cout << "Найдем значение выражения y = 3x^6 − 6x^2 − 7\n";
+	std::cout << "Найдем значение выражения y = 3x^6 - 6x^2 - 7\n";
 	std::cout << "Введите значение x\n";
 	std::cin >> x;
 
@@ -77,7 +80,7 @@ int main()
 	std::cout << "Ответ: " << y << "\n\n";
 
 	//5
-	std::cout << "Найдем значение выражения y = 4(x−3)^6 − 7(x−3)^3 + 2 \n";
+	std::cout << "Найдем значение выражения y = 4(x-3)^6 - 7(x-3)^3 + 2 \n";
 	std::cout << "Введите значение x\n";
 	std::cin >> x;
 
@@ -89,7 +92,7 @@ int main()
 	double a;
 	double powa;
 
-	std::cout << "Введите значение А";
+	std::cout << "Введите значение А\n";
 	std::cin >> a;
 
 	powa = a * a;
@@ -97,7 +100,7 @@ int main()
 	std::cout << "Значение А в 8 степени = " << powa * powa * powa * powa << "\n\n";
 
 	//7
-	std::cout << "Введите значение А";
+	std::cout << "Введите значение А\n";
 	std::cin >> a;
 
 	powa = a * a;
