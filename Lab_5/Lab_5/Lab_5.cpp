@@ -64,7 +64,7 @@ int main()
 	std::cout << "Даны координаты трех вершин треугольника: (x1, y1), (x2, y2), (x3, y3).\n";
 	std::cout << "Введите 6 координат через пробел в виде: x1, y1, x2, y2, x3, y3\n";
 
-	std::cin >> x1 >> y2 >> x2 >> y2 >> x3 >> y3;
+	std::cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 
 	double side_1 = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 	double side_2 = sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));

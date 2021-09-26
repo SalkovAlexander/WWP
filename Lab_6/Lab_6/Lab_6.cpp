@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 
 double pow(double num, int pow)
 {
@@ -19,16 +19,26 @@ int main()
 	double temp1, temp2;
 
 	//1
-	A = 10, B = 4;
+	std::cout << "Поменяev местами содержимое переменных A и B\n";
+	std::cout << "Введите значение переменной А\n";
+	std::cin >> A;
+	std::cout << "Введите значение переменной B\n";
+	std::cin >> B;
 	
 	temp1 = A;
 	A = B;
 	B = temp1;
 
-	std::cout << A << " " << B << "\n\n";
+	std::cout << "Значение переменной А - " << A << " Значение переменной В - " << B << "\n\n";
 
 	//2
-	A = 18, B = 9, C = 87;
+	std::cout << "Поменяev местами содержимое переменных A, B и С. A в B, B — в C, C — в A\n";
+	std::cout << "Введите значение переменной А\n";
+	std::cin >> A;
+	std::cout << "Введите значение переменной B\n";
+	std::cin >> B;
+	std::cout << "Введите значение переменной C\n";
+	std::cin >> C;
 
 	temp1 = B;
 	B = A;
@@ -36,45 +46,62 @@ int main()
 	C = temp1;
 	A = temp2;
 
-	std::cout << A << " " << B << " " << C << "\n\n";
+	std::cout << "Значение переменной А - " << A << " Значение переменной В - " << B << " Значение переменной C - " << C << "\n\n";
 
 	//3
-	A = 44, B = 3, C = 65;
+	std::cout << "Поменяev местами содержимое переменных A, B и С. A в C, C — в B, B — в A\n";
+	std::cout << "Введите значение переменной А\n";
+	std::cin >> A;
+	std::cout << "Введите значение переменной B\n";
+	std::cin >> B;
+	std::cout << "Введите значение переменной C\n";
+	std::cin >> C;
+
 	temp1 = C;
 	C = A;
 	temp2 = B;
 	B = temp1;
 	A = temp2;
 
-	std::cout << A << " " << B << " " << C << "\n\n";
+	std::cout << "Значение переменной А - " << A << " Значение переменной В - " << B << " Значение переменной C - " << C << "\n\n";
 
 	//4
-	double y, x = 2;
+	double y, x = 0;
 
+	std::cout << "Найдем значение выражения y = 3x^6 − 6x^2 − 7\n";
+	std::cout << "Введите значение x\n";
+	std::cin >> x;
 
 	y = 3.0 * pow(x, 6) - 6.0 * pow(x, 2) - 7;
 
-	std::cout << y << "\n\n";
+	std::cout << "Ответ: " << y << "\n\n";
 
 	//5
-	x = 4;
+	std::cout << "Найдем значение выражения y = 4(x−3)^6 − 7(x−3)^3 + 2 \n";
+	std::cout << "Введите значение x\n";
+	std::cin >> x;
 
 	y = 4 * pow(x - 3, 6) - 7 * (x - 3, 3) + 2;
 
-	std::cout << y << "\n\n";
+	std::cout << "Ответ: " << y << "\n\n";
 
 	//6
-	int a = 2;
+	double a;
+	double powa;
 
-	int powa = a * a;
+	std::cout << "Введите значение А";
+	std::cin >> a;
 
-	std::cout << powa * powa * powa * powa << "\n\n";
+	powa = a * a;
+
+	std::cout << "Значение А в 8 степени = " << powa * powa * powa * powa << "\n\n";
 
 	//7
-	a = 2;
+	std::cout << "Введите значение А";
+	std::cin >> a;
 
 	powa = a * a;
 	int powpowa = powa * powa;
 
-	std::cout << powpowa * powpowa * powpowa * a * a * a<< "\n\n";
+	std::cout << "Значение А в 15 степени = " << powpowa * powpowa * powpowa * a * a * a<< "\n\n";
 }
