@@ -1,11 +1,18 @@
 ﻿#include <iostream>
 #include <Windows.h>
 
+int SAA()
+{
+	std::cout << "|||SALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOVSALKOV|||\n";
+	std::cout << "|||############################################################################################################|||\n";
+	std::cout << "|||ALEXANDERALEXANDERALEXANDERALEXANDERALEXANDERALEXANDERALEXANDERALEXANDERALEXANDERALEXANDERALEXANDERALEXANDER|||\n\n";
+
+	return 0;
+}
+
 int one()
 {
 	int alpha;
-	
-	std::cout << "▓▓▓▓\n";
 
 	std::cout << "Дано значение угла альфа в градусах (0 < альфа < 360).\nОпределить значение этого же угла в радианах, учитывая, что 180 градусов = Пи радианов." << "\n";
 	std::cout << "Введите целое значение градусов" << "\n";
@@ -57,6 +64,7 @@ int three()
 
 {
 	double X, A, Y;
+
 	std::cout << "X киллограмм конфет стоят A  рублей" << "\n";
 	std::cout << "Введем значение X и A (цена конфет)\n";
 
@@ -155,10 +163,21 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	
+	SAA();
 	one();
+
+	SAA();
 	two();
+
+	SAA();
 	three();
+
+	SAA();
 	four();
+
+	SAA();
 	five();
+
+	SAA();
 	six();
 }
