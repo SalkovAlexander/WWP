@@ -102,9 +102,14 @@ int five()
 int six()
 {
 	double A1, B1, C1, A2, B2, C2;
+
 	std::cout << "Найти решение системы линейных уравнений вида A1·x + B1·y = C1, A2·x + B2·y = C2\n";
 	std::cout << "Введите коэффициенты А1, В1, c1, A2, B2 и С2 через пробел\n";
 
+	std::cin >> A1 >> B1 >> C1 >> A2 >> B2 >> C2;
+
+	/*
+	// Тестовы набор коэффициентов
 	A1 = 2;
 	B1 = 4;
 	C1 = 50;
@@ -113,15 +118,18 @@ int six()
 	B2 = 3;
 	C2 = 60;
 
-	double Temp_A = A1;
+	X = 5, Y = 10
+	*/
+
+	double Temp_A1 = A1;
 
 	A1 *= A2;
 	B1 *= A2;
 	C1 *= A2;
 
-	A2 *= -Temp_A;
-	B2 *= -Temp_A;
-	C2 *= -Temp_A;
+	A2 *= -Temp_A1;
+	B2 *= -Temp_A1;
+	C2 *= -Temp_A1;
 
 	double Sum_B, Sum_C;
 
@@ -131,14 +139,11 @@ int six()
 	double Y = Sum_C / Sum_B;
 	double X = (C1 - B1 * Y) / A1;
 
-	std::cout << X << " " << Y << "\n\n";
-
-	//умножить коэф. 1 уравнения на коэф. перед х второго и наоборот
-
-
+	std::cout << "X = " << X << " Y = " << Y << "\n\n";
 
 	return 0;
 }
+
 int main()
 {
 	SetConsoleCP(1251);
