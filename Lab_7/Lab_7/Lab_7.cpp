@@ -85,10 +85,64 @@ int four()
 	return 0;
 }
 
+int five()
+{
+	double A = 0, B;
+
+	std::cout << "Решить линейное уравнение A·x + B = 0, заданное своими коэффициентами A и B (коэффициент A не равен 0)\n";
+	std::cout << "Введите коэффициенты А и В через пробел\n";
+
+	std::cin >> A >> B;
+
+	std::cout << "x = " << -B / A << "\n\n";
+
+	return 0;
+}
+
+int six()
+{
+	double A1, B1, C1, A2, B2, C2;
+	std::cout << "Найти решение системы линейных уравнений вида A1·x + B1·y = C1, A2·x + B2·y = C2\n";
+	std::cout << "Введите коэффициенты А1, В1, c1, A2, B2 и С2 через пробел\n";
+
+	A1 = 2;
+	B1 = 4;
+	C1 = 50;
+
+	A2 = 6;
+	B2 = 3;
+	C2 = 60;
+
+	double Temp_A = A1;
+
+	A1 *= A2;
+	B1 *= A2;
+	C1 *= A2;
+
+	A2 *= -Temp_A;
+	B2 *= -Temp_A;
+	C2 *= -Temp_A;
+
+	double Sum_B, Sum_C;
+
+	Sum_B = B1 + B2;
+	Sum_C = C1 + C2;
+
+	double Y = Sum_C / Sum_B;
+	double X = (C1 - B1 * Y) / A1;
+
+	std::cout << X << " " << Y << "\n\n";
+
+	//умножить коэф. 1 уравнения на коэф. перед х второго и наоборот
+
+
+
+	return 0;
+}
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	
-	four();
+	six();
 }
