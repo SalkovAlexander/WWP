@@ -19,7 +19,19 @@ int One()
 
 	std::cin >> FileWeightBytes;
 
-	std::cout << "Размер файла = " << FileWeightBytes / 1024 << " килобайт(а)\n\n";
+	double a = FileWeightBytes / 1024;
+	int b;
+
+	if (a / 1 != 0)
+	{
+		b = a + 1;
+	}
+	else
+	{
+		b = a;
+	}
+
+	std::cout << "Размер файла = " << b  << " килобайт(а)\n\n";
 
 	return 0;
 }
