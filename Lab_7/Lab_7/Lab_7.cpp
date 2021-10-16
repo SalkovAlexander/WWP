@@ -92,7 +92,7 @@ int four()
 
 	std::cin >> V1 >> V2 >> S >> T;
 
-	S_final = abs(V1 * T - V2 * T) + S;
+	S_final = abs(V1 * T + V2 * T) + S;
 
 	std::cout << "Расстояние между автомобилями равно " << S_final << " км." << "\n\n";
 
@@ -135,23 +135,14 @@ int six()
 	X = 5, Y = 10
 	*/
 
-	double Temp_A1 = A1;
+	double Delta, Delta1, Delta2;
 
-	A1 *= A2;
-	B1 *= A2;
-	C1 *= A2;
+	Delta = A1 * B2 - B1 * A2;
+	Delta1 = C1 * B2 - B1 * C2;
+	Delta2 = A1 * C2 - C1 * A2;
 
-	A2 *= -Temp_A1;
-	B2 *= -Temp_A1;
-	C2 *= -Temp_A1;
-
-	double Sum_B, Sum_C;
-
-	Sum_B = B1 + B2;
-	Sum_C = C1 + C2;
-
-	double Y = Sum_C / Sum_B;
-	double X = (C1 - B1 * Y) / A1;
+	double Y = Delta2 / Delta;
+	double X = Delta1 / Delta;
 
 	std::cout << "X = " << X << " Y = " << Y << "\n\n";
 
