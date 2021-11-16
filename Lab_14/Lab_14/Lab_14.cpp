@@ -145,6 +145,13 @@ int fib(int n)
     return Fn;
 }
 
+int fib_index(int n)
+{
+    float fibo = 2.078087 * log(n) + 1.672276;
+    
+    return round(fibo);
+}
+
 int six()
 {
     std::cout << "6. Дано целое число N (> 1), являющееся числом Фибоначчи: N = FK. Найти целое число K — порядковый номер числа Фибоначчи N.\n";
@@ -154,28 +161,37 @@ int six()
     
     std::cin >> Fn;
 
+
+    /* Решение через перебор
     for (int i = 1; fib(i) != Fn; i++)
     {
         n = i + 1;
     }
 
     std::cout << n;
+    */
+
+    //Решение через формулу 
+    std::cout << "n = " << fib_index(Fn);
+
 
     std::cout << "\n\n";
 
     return 0;
 }
 
+
+
 int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    one();
-    two();
-    three();
-    four();
-    five();
+    //one();
+    //two();
+    //three();
+    //four();
+    //five();
     six();
 
     return 0;
