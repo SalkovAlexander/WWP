@@ -1,5 +1,6 @@
 #include <iostream>
 #include <Windows.h>
+#include <cmath>
 
 int main()
 {
@@ -31,6 +32,7 @@ int main()
 	double AC = abs(A - C);
 	double BC = abs(B - C);
 	double ACBC = AC + BC;
+
 
 	std::cout << "Длина отрезка АС = " << AC << " Длина отрезка ВС = " << BC << " Сумма АС и ВС = " << ACBC << "\n\n";
 
@@ -77,3 +79,5 @@ int main()
 
 	std::cout << "Площадь треугольника = " << S << " Периметр треугольника = " << P << "\n\n";
 }
+
+

@@ -559,11 +559,11 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-   // one();
+    one();
     two();
-    //three();
-    //four();
-    //five();
+    three();
+    four();
+    five();
 
     return 0;
 }

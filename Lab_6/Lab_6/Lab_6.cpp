@@ -1,20 +1,11 @@
 ﻿#include <iostream>
 #include <Windows.h>
-
-double pow(double num, int pow)
-{
-	double r = num;
-	int i;
-	for (i = 1; i < pow; i++)
-	{
-		r *= num;
-	}
-
-	return r;
-}
+#include <cmath>
 
 int main()
 {
+
+
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
@@ -24,10 +15,10 @@ int main()
 	//1
 	std::cout << "Поменяeм местами содержимое переменных A и B\n";
 	std::cout << "Введите значение переменной А\n";
-	std::cin >> A;
+	std::cin >> A; //1
 	std::cout << "Введите значение переменной B\n";
-	std::cin >> B;
-	
+	std::cin >> B; //0
+
 	temp1 = A;
 	A = B;
 	B = temp1;
