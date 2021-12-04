@@ -1,0 +1,1 @@
+This is Blueprint class for Unreal Engine 4.27.1
